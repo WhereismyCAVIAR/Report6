@@ -32,4 +32,28 @@ public class Numenumeron{
         System.out.println(title);
         System.out.println(rule);
     }
+
+        /**
+     * ランダムな答えを作成
+     * 数字が重複しないようにする
+     * 前の要素にかぶるやつがないか確かめ，あればもう一度random
+     * @return answer
+     */
+    public int[] answer(){
+        for (int i = 0; i < answer.length; i++) {
+            boolean flag = false;
+            answer[i] = (int) (Math.random() * 9 + 1);
+            do {
+                flag = false;
+                for (int j = i - 1; j >= 0; j--) {
+                    if (answer[i] == answer[j]) {
+                        flag = true;
+                        answer[i] = (int) (Math.random() * 9 + 1);
+                    }
+                }
+
+            } while (flag == true);
+        }
+        return answer;
+    }
 }

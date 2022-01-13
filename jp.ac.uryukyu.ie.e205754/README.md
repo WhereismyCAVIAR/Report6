@@ -1,0 +1,3 @@
+ふとこの間，YouTubeで懐かしの番組「NumerOn」見たことをきっかけに出来たこのゲーム．その名も「Numenumeron」．
+
+SolverClassとしてNumenumeron.java，SolverTestClassとしてNumenumeronTest.java，SolverClassを動かすMain.javaの3つのクラスで構成した．

@@ -1,5 +1,9 @@
 package jp.ac.uryukyu.ie.e205754;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Numenumeronを実装する
  */
@@ -55,5 +59,31 @@ public class Numenumeron{
             } while (flag == true);
         }
         return answer;
+    }
+
+    /**
+     * ゲーム実行
+     * ループ処理の実装
+     * inputで文字入力
+     */
+    public void execution(int[] answer){
+        while(true){
+            BufferedReader br 
+                = new BufferedReader(new InputStreamReader(System.in));
+            count++;
+            System.out.println("*** "+count + "回目 ***");
+            for (int i = 0; i < answer.length; i++) {
+                System.out.print( (i + 1) + "個目 : ");
+                try {
+                    input[i] = Integer.parseInt(br.readLine());
+                } catch (NumberFormatException e) {
+                    System.err.println("数値を入力してください");
+                    i--;
+                } catch (IOException e) {
+                    System.err.println("もう一度入力してください");
+                    i--;
+                }
+            }
+        }
     }
 }

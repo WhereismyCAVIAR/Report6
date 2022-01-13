@@ -8,8 +8,7 @@ public class Main{
         Numenumeron nume = new Numenumeron();
         nume.direction();
         int[] answer;
-        //answerが作成されているか確認用コード
-        answer = nume.answer();       
-        System.out.println(answer);       
+        answer = nume.answer();
+        nume.execution(answer);     
     }
 }

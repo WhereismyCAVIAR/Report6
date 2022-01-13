@@ -37,10 +37,10 @@ public class Numenumeron{
         System.out.println(rule);
     }
 
-        /**
+    /**
      * ランダムな答えを作成
      * 数字が重複しないようにする
-     * 前の要素にかぶるやつがないか確かめ，あればもう一度random
+     * 前の要素にかぶるやつがないか確かめ，あればもう一度randam
      * @return answer
      */
     public int[] answer(){
@@ -60,11 +60,12 @@ public class Numenumeron{
         }
         return answer;
     }
-
+    
     /**
      * ゲーム実行
      * ループ処理の実装
      * inputで文字入力
+     * strike3でゲーム終了
      */
     public void execution(int[] answer){
         while(true){
@@ -83,6 +84,27 @@ public class Numenumeron{
                     System.err.println("もう一度入力してください");
                     i--;
                 }
+            }
+            strike = 0;
+            ball = 0;
+            for (int i = 0; i < answer.length; i++) {
+                for (int j = 0; j < answer.length; j++) {
+                    if (i == j && input[i] == answer[j]) {
+                        strike++;
+                    } else if (input[i] == answer[j]) {
+                        ball++;
+                    }
+                }
+            }
+        
+            System.out.println("ストライク" + strike + "ボール" + ball);
+
+            if(strike == 3){
+                System.out.println("\n"
+                + "congratulations!\n"); 
+                break;
+            }else{
+                System.out.println();
             }
         }
     }

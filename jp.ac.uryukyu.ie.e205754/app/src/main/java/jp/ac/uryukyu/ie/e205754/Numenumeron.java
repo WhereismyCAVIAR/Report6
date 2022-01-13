@@ -40,7 +40,7 @@ public class Numenumeron{
     /**
      * ランダムな答えを作成
      * 数字が重複しないようにする
-     * 前の要素にかぶるやつがないか確かめ，あればもう一度randam
+     * 前の要素にかぶるやつがないか確かめ，あればもう一度random
      * @return answer
      */
     public int[] answer(){

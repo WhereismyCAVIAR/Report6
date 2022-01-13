@@ -1,3 +1,9 @@
 ふとこの間，YouTubeで懐かしの番組「NumerOn」見たことをきっかけに出来たこのゲーム．その名も「Numenumeron」．
 
 SolverClassとしてNumenumeron.java，SolverTestClassとしてNumenumeronTest.java，SolverClassを動かすMain.javaの3つのクラスで構成した．
+
+ルール
+・ランダムに決められた異なる3つの数字を当てるゲーム．
+・入力した数字が含まれていて，さらに位置まで当たっている場合はストライク．
+位置は当たっていないがその数字が含まれている場合はボールとなる．
+・3ストライクでゲームクリア．
